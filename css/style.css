@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&display=swap');
 
 * {
     margin: 0;
@@ -6,23 +6,19 @@
     border: none;
 }
 
-
-
 body {
-    font-family: lato, sans-serif;
+    font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
 
-/* heading and logo*/
+/* headings and logo */
 
-h1,
-h2 {
-    font-family: oswald, sans-serif;
+h1, h2 {
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
-
 }
 
 #logo {
@@ -31,23 +27,20 @@ h2 {
     margin-left: 30px;
 }
 
-#menu {
+/* navigation links */
 
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
-
-
 }
 
-#menu,
-#logo {
+#menu, #logo {
     line-height: 75px;
 }
 
-#menu,
-li {
+#menu li {
     float: right;
-    list-style: none;
+    list-style-type: none;
     margin-right: 30px;
 }
 
@@ -64,37 +57,38 @@ li {
     border-bottom: 1px solid #3a3a3a;
 }
 
-#hero-image {
-    height: 600px;
-    width: 100%;
-    background: url('../images/hero-image.webp') no-repeat center center;
-    animation-name: hero-zoom;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-
-}
-
-#cover-text,
-#cover-text h2 {
-    color: #fff;
-}
+/* hero image and cover text */
 
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
+
     position: relative;
 }
 
+#cover-text, #cover-text h2 {
+    color: #fff;
+}
+
+#hero-image {
+    height: 600px;
+    width: 100%;
+    background: url('../images/hero-image.webp') no-repeat center center;
+
+    /* animates zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+/* creates the level of zoom for hero image */
 @keyframes hero-zoom {
-    from {
+    from{
         transform: scale(1);
-
     }
-
-    to {
+    to{
         transform: scale(1.1);
-
     }
 }
 
@@ -114,40 +108,37 @@ li {
 
     bottom: 30px;
     right: 150px;
-    position: absolute;
 
+    position: absolute;
 }
+
+/* club ethos */
 
 #club-ethos {
     height: 600px;
-
 }
 
 #left-about {
     padding-top: 30px;
     width: 33%;
     float: left;
-
 }
 
 #right-about {
     padding-top: 30px;
     width: 33%;
     float: right;
-
 }
 
 #center-about {
     width: 33%;
     margin: 0 auto;
-    
-
 }
 
 hr {
     border-top: 1px solid #3a3a3a;
-    margin: 5px 0;
     width: 100%;
+    margin: 5px 0;
 }
 
 .left-about-heading {
@@ -166,17 +157,13 @@ hr {
     margin-bottom: 50px;
 }
 
-.right-about-heading
-h2 {
+.right-about-heading h2 {
     text-align: right;
 }
 
-.right-about-heading
-p {
+.right-about-heading p {
     text-align: right;
 }
-
-
 
 #welcome {
     text-align: center;
@@ -193,19 +180,18 @@ p {
     border-width: 1px;
     border-radius: 50%;
     margin: 0 auto;
-    
 }
 
 #circle-cover-bg {
-    background: url(/images/ethos-center-image.jpg) no-repeat center center;
+    background: url('../images/ethos-center-image.jpg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
-
-
 }
 
+/* event times */
+
 #times {
-    background-image: url(/images/dublin-city.webp);
+    background-image: url('../images/times-background.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -214,8 +200,8 @@ p {
 }
 
 #times div {
-    color:#fafafa;
-    background-color:rgba(0, 0 ,0 ,.6);
+    color: #fafafa;
+    background-color: rgba(0, 0, 0, .6);
     width: 20%;
     height: 300px;
     float: left;
@@ -226,6 +212,26 @@ p {
 }
 
 #times h2 {
-    color:#fafafa;
+    color: #fafafa;
+}
 
+/* footer */
+
+footer {
+    height: 150px;
+}
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 160%;
+    margin: 1%;
+    padding: 5%;
+    color: #3a3a3a;
 }
